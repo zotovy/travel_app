@@ -25,7 +25,7 @@ SECRET_KEY = '$_arev+hmqf=%toii5+sd@st2k!uk+1fh#8ozye*$^#9pj_fg7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pbvo.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'pandadev.pythonanywhere.com']
 
 
 # Application definition
