@@ -5,3 +5,7 @@ venv
 db.sqlite3
 /static
 .DS_Store
+/.vscode/
+tmp.py
+screenshot.png
+

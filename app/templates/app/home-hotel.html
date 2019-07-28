@@ -1,0 +1,41 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+</head>
+<body>
+    
+    <div class="upbar">
+        <div class="logo inline">
+            <img src="{% static 'img/logo.png'%}" alt="">
+            <span class="title">Name</span>
+        </div>
+        <div class="cabinet inline">
+            <img src="{% static 'img/cabinet.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="title">
+        <p>Search cheapest flights.</p>
+    <div class="subtitle">
+        <p>The best way to buy cheap flights</p>
+    </div>
+    </div>
+
+    {% spaceless %}
+    <div class="flight-hotel-button">
+        <div class="flight inline" ><button>Flights</button></div>
+        <div class="hotel inline"><a href="hotel"><button onclick="">Hotel</button></a></div>
+    </div>
+    {% endspaceless %}
+
+   
+
+</body>
+</html>

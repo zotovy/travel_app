@@ -1,0 +1,70 @@
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    
+
+</head>
+<body>
+    
+    <div class="upbar">
+        <div class="logo inline">
+            <img src="{% static 'img/logo.png'%}" alt="">
+            <span class="title">Name</span>
+        </div>
+        <div class="cabinet inline">
+            <img src="{% static 'img/cabinet.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="title">
+        <p>Search cheapest flights.</p>
+    <div class="subtitle">
+        <p>The best way to buy cheap flights</p>
+    </div>
+    </div>
+
+    {% spaceless %}
+    <div class="flight-hotel-button">
+        <div class="flight inline"><button class='123'>Flights</button></div>
+        <div class="hotel inline"><button>Hotel</button></div>
+    </div>
+    {% endspaceless %}
+
+   
+    <div class="search_flights">
+        <div class="from inline"><input id='from_input' type="text" placeholder='from'></div>
+        <div class="to inline"><input id='to_input'type="text" placeholder='to'></div>
+        <div class="date inline"><input id='date_input' type="text" placeholder='date'></div>
+        <div class="search inline"><button id="search">Search</button></div>
+    </div>
+
+
+    <script>
+        $("#from_input").keyup(function(event){
+            if(event.keyCode == 13){
+                $('#to_input').focus();
+            }
+        });
+        $("#to_input").keyup(function(event){
+            if(event.keyCode == 13){
+                $('#date_input').focus();
+            }
+        });
+        $("#date_input").keyup(function(event){
+            if(event.keyCode == 13){
+                $('#search').focus();
+            }
+        });
+    </script>
+
+</body>
+</html>

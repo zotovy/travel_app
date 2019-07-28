@@ -1,0 +1,209 @@
+html{
+    background: linear-gradient(45deg, #36AEDD, #65EBF5);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+html:hover{
+    transition: 0.5s;
+}
+
+.inline{
+    display: inline-block;
+}
+button{
+    border: 0;
+    padding: 0;
+}
+
+
+
+.logo{
+    margin-left: 30px;
+}
+.upbar .title{
+    text-transform: uppercase;
+    font-size: 26pt;
+    color: white;
+    margin: 0 20px;
+    vertical-align: 33%;  
+    font-weight: bold;  
+}
+.cabinet{
+    float: right;
+    margin-right: 30px;
+}
+
+.title p{ 
+    display: block;
+    font-size: 48pt;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 12vh;
+    padding: 0;
+    margin-bottom: 0;
+}
+.subtitle p{
+    color: white;
+    font-size: 20pt;
+    font-weight: 400;
+    text-align: center; 
+    margin-top: 2vh;
+}
+
+.flight button{
+    border-radius: 50px 0px 0px 50px;
+    width: 125px;
+    height: 50px;
+    background: none;
+    border: 2px solid white;
+    position: relative;
+    text-transform: uppercase;  
+    color: white;
+    transition: 0.5s;
+    overflow: hidden; 
+}
+
+.hotel button{
+    border-radius: 0 50px 50px 0;
+    position: relative;
+    width: 125px;
+    height: 50px;
+    background: none;
+    border: 2px solid white;
+    text-transform: uppercase;  
+    color: white;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.hotel button:hover{
+    background: rgba(255, 255, 255, 0.25);
+    /* color: #22A7DB; */
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hotel button:active{
+    color: #fff;
+}
+
+.flight button:hover{
+    background: rgba(255, 255, 255, 0.25);
+    /* color: #22A7DB; */
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.hotel button:focus, .flight button:focus{
+    color: #36AEDD;
+}
+
+.flight-hotel-button{
+    text-align: center;
+    margin-top: 4%;
+    overflow: hidden;
+}
+@keyframes move{
+    from {
+        width: 0%;
+    }
+    to{
+        width: 180%;
+    }
+}
+
+.hotel button::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    /* display: block; */
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 200%;
+    z-index: -10;
+    float: left;
+    transition: 0.7s;
+    border-radius:  0 50% 50% 0;
+}
+.flight button::after{
+    content:"";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* display: block; */
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 200%;
+    z-index: -10;
+    float: right;
+    transition: 0.7s;
+    border-radius: 50% 0 0 50%;
+
+}
+.hotel button, .flight button{
+    outline: none;
+}
+
+.hotel button:focus::before{
+    animation: move 0.7s ease-in-out;
+    width: 180%;
+}
+.flight button:focus::after{
+    animation: move 0.7s ease-in-out;
+    width: 180%;
+}
+
+.from input, .to input, .date input{
+    font-size: 18pt;
+    font-family: 'Lato';
+    width: 200px;
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 100;
+    text-align: center;
+    box-shadow: 0 7px 11px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+}
+.search button{
+    font-size: 18pt;
+    margin: 0 20px;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    background: #FFA800;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.search_flights{
+    text-align: center;
+    margin: 4.34375%
+}
+
+.from input:focus, .to input:focus, .date input:focus{
+    text-align: left;
+    outline: none;
+}
+.search button{
+    outline: none;
+}
+.search button:active{
+    color: white;
+    background:  #da8e0c;
+    /* transform: 0s; */
+}
+
+.text{
+    /* padding-top: 3%; */
+    margin-top: 3%;
+}
+.text span{
+    margin-left: 15%;
+}
